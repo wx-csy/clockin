@@ -1,0 +1,25 @@
+$def with (data, date, format)
+<div align="center">
+    <h2>打卡记录 - $date</h2>
+<table>
+    <tr>
+        <th>姓名</th>
+        <th>学号</th>
+        <th>专业</th>
+        <th>早温</th>
+        <th>早签</th>
+        <th>打卡时间</th>
+        <th>午温</th>
+        <th>打卡时间</th>
+        <th>晚温</th>
+        <th>晚归</th>
+        <th>打卡时间</th>
+    </tr>
+    $for item in data :
+        <tr>
+        $for value, fmt in zip(item, format) :
+            <td style="text-align:center;">$:fmt(value)</td>
+        </tr>
+</table>
+</div>
+

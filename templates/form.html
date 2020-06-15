@@ -1,0 +1,9 @@
+$def with (form, type)
+ 
+<div align="center">
+    <h2>每日打卡 - $(time.strftime("%Y.%m.%d")) $(['', '早', '中', '晚'][type]) </h2>
+    <form action="$(['', '/clockin/morning', '/clockin/noon', '/clockin/evening'][type])" name="main" method="post"> 
+    $:form.render()
+    <input type="submit" />
+    </form>
+</div>

@@ -1,0 +1,19 @@
+$def with (content)
+<html>
+<head>
+    <title>匡亚明学院2020届打卡系统</title>
+</head>
+<body>
+$:content
+
+<hr />
+<div align="center">
+    $:get_ad()<br />
+    <a href="/clockin">我要打卡</a> | <a href="/clockin/stat/$(time.strftime('%Y%m%d'))">打卡统计</a> | <a href="/clockin/readme">打卡说明</a>
+    <br />
+    Server time: $(time.strftime("%b/%d/%Y %X")) <br />
+    Kuang Yaming Honors School, Nanjing University 
+<div>
+
+</body>
+</html>
