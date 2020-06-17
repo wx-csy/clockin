@@ -7,7 +7,7 @@ def get_ad() :
     cur = dbconn.cursor()
     cur.execute('''
         SELECT content FROM ads
-        WHERE date_begin <= ? AND date_end >= ?
+        WHERE date_begin <= ? AND date_end >= ? AND visible = 1
     ''', [time.strftime('%Y%m%d')] * 2)
     ret = cur.fetchall()
     dbconn.close()
